@@ -90,6 +90,8 @@ Candy.item = {
 		var candy = game.add.sprite(dropPos, dropOffset[candyType], 'candy');
 		// add new animation frame
 		candy.animations.add('anim', [candyType], 10, true);
+		// play the newly created animation
+		candy.animations.play('anim');
 		// enable candy body for physic engine
 		game.physics.enable(candy, Phaser.Physics.ARCADE);
 		// enable candy to be clicked/tapped
